@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css/bootstrap.min.css")
+    <script type="text/javascript" src="~/Content/jquery-3.2.1.min.js"></script>
+
+
+    <style>
+        small{
+            font-size: 12px;
+            line-height: 5px;
+            padding:0;
+            margin:0;
+        }
+
+        .bg-neolife {
+
+            background: #80c342;
+        }
+
+        .badge{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-toggleable-xl navbar-inverse bg-neolife">
+        <div class="container">
+            <a class="navbar-brand" href="/">Interswitch Integration Demo</a>
+        </div>
+    </nav>
+
+    <div class="container body-content" style="margin-top:20px;">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
