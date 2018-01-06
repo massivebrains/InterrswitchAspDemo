@@ -23,7 +23,7 @@ namespace InterswitchDemoAsp.Controllers
             ViewBag.Amount                  = random.Next(1000, 100000);
             ViewBag.Amount                  = ViewBag.Amount - ViewBag.Amount % 1000;
             ViewBag.Currency                = "566";
-            ViewBag.SiteRedirectUrl         = Request.Url.GetLeftPart(UriPartial.Authority)+"/home/callback/";
+            ViewBag.SiteRedirectUrl         = Request.Url.GetLeftPart(UriPartial.Authority)+"/home/callback?";
             ViewBag.TransactionReference    = RandomString();
             ViewBag.CustomerId              = random.Next(0, 100);
 
