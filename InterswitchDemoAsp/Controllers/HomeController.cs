@@ -12,7 +12,7 @@ namespace InterswitchDemoAsp.Controllers
 {
     public class HomeController : Controller
     {
-        public string MacKey                = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
+        public string MacKey  = "D3D1D05AFE42AD50818167EAC73C109168A0F108F32645C8B59E897FA930DA44F9230910DAC9E20641823799A107A02068F7BC0F4CC41D2952E249552255710F";
 
         public ActionResult Index()
         {
@@ -20,10 +20,11 @@ namespace InterswitchDemoAsp.Controllers
 
             ViewBag.ProductId               = 6205;
             ViewBag.PayItemId               = 101;
-            ViewBag.Amount                  = random.Next(1000, 100000);
+            ViewBag.Amount                  = random.Next(1000, 99999);
+            ViewBag.OrderId                 = random.Next(1000, 99999);
             ViewBag.Amount                  = ViewBag.Amount - ViewBag.Amount % 1000;
             ViewBag.Currency                = "566";
-            ViewBag.SiteRedirectUrl         = Request.Url.GetLeftPart(UriPartial.Authority)+"/home/callback?";
+            ViewBag.SiteRedirectUrl         = Request.Url.GetLeftPart(UriPartial.Authority)+"/interswitchdemo/home/callback?";
             ViewBag.TransactionReference    = RandomString();
             ViewBag.CustomerId              = random.Next(0, 100);
 
@@ -89,6 +90,20 @@ namespace InterswitchDemoAsp.Controllers
             return View();
         }
 
+
+        public ActionResult UssdCallback()
+        {
+            ViewBag.Status      = Request["status"];
+            ViewBag.Amount      = Request["amount"];
+            ViewBag.Source      = Request["source"];
+            ViewBag.Reference   = Request["reference"];
+            ViewBag.Date        = Request["date"];
+            ViewBag.Desc        = Request["desc"];
+
+            //Use Data here...
+
+            return View();
+        }
      
     }
 }

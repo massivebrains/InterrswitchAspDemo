@@ -1,0 +1,12 @@
+﻿<form name="form" action="https://sandbox.interswitchng.com/webpay/pay" method="POST" id="form">
+
+    <input name="product_id" type="hidden" value="@ViewBag.ProductId" />
+    <input name="pay_item_id" type="hidden" value="@ViewBag.PayItemId" />
+    <input name="amount" type="hidden" value="@ViewBag.Amount" />
+    <input name="currency" type="hidden" value="@ViewBag.Currency" />
+    <input name="site_redirect_url" type="hidden" value="@ViewBag.SiteRedirectUrl" />
+    <input name="txn_ref" type="hidden" value="@ViewBag.TransactionReference" />
+    <input name="cust_id" type="hidden" value="@ViewBag.CustomerId" />
+    <input name="hash" type="hidden" value="@ViewBag.Hash"/>
+
+</form>
