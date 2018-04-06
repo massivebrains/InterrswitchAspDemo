@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "UssdCallback";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3>USSD Transaction Response</h3>
+
+        <p>
+            <code>As you can see in the get parameters sent back to the callback, the response data is avaliable out of the box.</code>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Status</td>
+                        <td>@ViewBag.Status</td>
+                        <td>If payment was succesful or not. 1 for Successful. 0 for Unsuccessful.</td>
+                    </tr>
+                    <tr>
+                        <td>Amount</td>
+                        <td>@ViewBag.Amount</td>
+                        <td>Amount Approved By Payment Gateway</td>
+                    </tr>
+                    <tr>
+                        <td>Source</td>
+                        <td>@ViewBag.Source</td>
+                        <td>Channel Used By Customer - Keep just for reference purposes</td>
+                    </tr>
+                    <tr>
+                        <td>Reference</td>
+                        <td>@ViewBag.Reference</td>
+                        <td>Transaction Reference</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>@ViewBag.Date</td>
+                        <td>Transaction Date</td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td>@ViewBag.Desc</td>
+                        <td>Transaction Description and any other information</td>
+                    </tr>
+                    <!-- Cotact Segun of Neolife for Issues -->
+                </tbody>
+            </table>
+        </p>
+    </div>
+</div>

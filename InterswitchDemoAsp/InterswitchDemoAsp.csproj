@@ -202,6 +202,7 @@
     <Content Include="Views\Shared\InterswitchForm.cshtml" />
     <Content Include="Views\Dashboard\Interswitch.cshtml" />
     <Content Include="Views\Home\UssdCallback.cshtml" />
+    <Content Include="Views\Shared\UssdForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

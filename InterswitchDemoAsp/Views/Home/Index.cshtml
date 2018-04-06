@@ -74,11 +74,12 @@
         <ul class="list-group">
             <li class="list-group-item">
                 @Html.Partial("InterswitchForm")
+                @Html.Partial("UssdForm")
                 <a href="javascript:void(0)" onclick="$('#form').submit()">
                     <img src="~/Content/images/interswitch.png" class="img img-thumbnail img-responsive" />
                 </a>
             </li>
-            <li class="list-group-item"><strong><a href="javascript:void(0)" id="pay-with-ussd">PAY VIA USSD</a></strong></li>
+            <li class="list-group-item"><strong><a href="javascript:void(0)" onclick="$('#ussd-form').submit()">PAY VIA USSD</a></strong></li>
             <li class="list-group-item"><strong><a href="javascript:void(0)">Bank Deposit</a></strong></li>
             <li class="list-group-item"><strong><a href="javascript:void(0)">Mobile Money</a></strong></li>
         </ul>

@@ -5,8 +5,9 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="alert alert-info">
-            <strong> Select your prefered payemnt method to complete your order.</strong><br />
-            Test Cards Url : <a href="https://sandbox.interswitchng.com/docbase/docs/webpay/test-cards/" target="_blank">https://sandbox.interswitchng.com/docbase/docs/webpay/test-cards/</a>
+            <strong> Select your prefered payment method to complete your order.</strong><br />
+            Test Cards Url : <a href="https://sandbox.interswitchng.com/docbase/docs/webpay/test-cards/" target="_blank">https://sandbox.interswitchng.com/docbase/docs/webpay/test-cards/</a><br /><br />
+            For USSD, Click on the Simulate payment at the top right coner of the Dialogue to simulate test Payment.
         </div>
     </div>
 </div>
@@ -73,11 +74,12 @@
         <ul class="list-group">
             <li class="list-group-item">
                 @Html.Partial("InterswitchForm")
+                @Html.Partial("UssdForm")
                 <a href="javascript:void(0)" onclick="$('#form').submit()">
                     <img src="~/Content/images/interswitch.png" class="img img-thumbnail img-responsive" />
                 </a>
             </li>
-            <li class="list-group-item"><strong><a href="javascript:void(0)" id="pay-with-ussd">PAY VIA USSD</a></strong></li>
+            <li class="list-group-item"><strong><a href="javascript:void(0)" onclick="$('#ussd-form').submit()">PAY VIA USSD</a></strong></li>
             <li class="list-group-item"><strong><a href="javascript:void(0)">Bank Deposit</a></strong></li>
             <li class="list-group-item"><strong><a href="javascript:void(0)">Mobile Money</a></strong></li>
         </ul>

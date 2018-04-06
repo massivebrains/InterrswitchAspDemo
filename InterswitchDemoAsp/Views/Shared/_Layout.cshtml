@@ -45,25 +45,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
     @RenderSection("scripts", required: false)
-    <script type="text/javascript" src="https://mcommerce.gnld-ng.com/assets/ussd.js"></script>
-    <script type="text/javascript">
-        $(() => {
-
-            $('#pay-with-ussd').click(() => {
-
-                $('#pay-with-ussd').html('Loading Payment Gateway...');
-
-                USSD.setup({
-
-                    amount       : @ViewBag.Amount,
-                    orderId      : @ViewBag.OrderId,
-                    msisdn       : '2348175020329', //Customer MSISDN (Mobile Phone Number)
-                    description  : 'Payment of @ViewBag.Amount For 063-0863717 Via USSD Site',
-                    callback     : '@Url.Action("ussdcallback", "home", null, Request.Url.Scheme)'
-
-                });
-            })
-        })
-    </script>
+ 
 </body>
 </html>

@@ -27,6 +27,7 @@ namespace InterswitchDemoAsp.Controllers
             ViewBag.SiteRedirectUrl         = Request.Url.GetLeftPart(UriPartial.Authority)+"/interswitchdemo/home/callback?";
             ViewBag.TransactionReference    = RandomString();
             ViewBag.CustomerId              = random.Next(0, 100);
+            ViewBag.MobileNumber            = "2348175020329";
 
             string Hash         = ViewBag.TransactionReference+ViewBag.ProductId+ViewBag.PayItemId+ViewBag.Amount+ViewBag.SiteRedirectUrl+this.MacKey;
 

@@ -1,0 +1,25 @@
+﻿<form name="form" action="https://mcommerce.gnld-ng.com/index.php/pay" method="POST" id="ussd-form">
+
+    <!-- Order Total-->
+    <input name="amount" type="hidden" value="@ViewBag.Amount" />
+
+    <!-- Order ID-->
+    <input name="orderid" type="hidden" value="@ViewBag.OrderId" />
+
+    <!-- Customer MSISDN (Mobile Phone Number)-->
+    <input name="customerid" type="hidden" value="@ViewBag.MobileNumber" />
+
+    <!-- Payment Description : Set to your own description-->
+    <input name="description" type="hidden" value="Payment of @ViewBag.Amount for @ViewBag.MobileNumber" />
+
+    <!-- Callback URL : Url to consume response data-->
+    <input name="callback" type="hidden" value="@Url.Action("ussdcallback", "home", null, Request.Url.Scheme)" />
+
+    <!-- Return URL : Just the initiating url. Url to return user to if they cancel payment procedure. Should be the url they are coming from.-->
+    <input name="returnurl" type="hidden" value="@Request.Url.AbsoluteUri" />
+
+    <!-- Public Authentication Key : Use this for test.-->
+    <input name="public_key" type="hidden" value="a66e6322dc1c841c9e8fc38074f3282e" />
+
+
+</form>
